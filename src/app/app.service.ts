@@ -13,9 +13,7 @@ export class AppService {
 
 constructor(private _http: HttpClient) { }
 
-
  getPorcentage(param: any): Observable<any>{
-
   const params  = 'fname=' + param.chica +
                   '&sname=' + param.chico
 return this._http.get(APIURL.consulta + params, {headers: cabecera});
