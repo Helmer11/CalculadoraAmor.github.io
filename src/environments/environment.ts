@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false,
+  AppName: '/CalculadoraAmor/',
+  ServerName: 'localhost',
   API:'https://love-calculator.p.rapidapi.com/getPercentage?',
   param: { sname: '', fname: ''},
   Headers: {

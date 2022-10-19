@@ -44,11 +44,14 @@ getForm(){
   }
 
   limpiar(){
+
     this.formDatos.patchValue({
       Chica: '',
       Chico: ''
     })
+      window.location.reload();
   }
+
 }
 
 
