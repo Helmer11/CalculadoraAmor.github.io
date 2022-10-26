@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Validators, FormBuilder, FormGroup } from '@angular/forms';
+import {Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { AppService } from './app.service';
 
 @Component({
@@ -23,8 +23,8 @@ ngOnInit() {
 
 getForm(){
   this.formDatos = this._formB.group({
-    Chica: ['', Validators.required ],
-    Chico: ['', Validators.required]
+    Chica:new FormControl('', [Validators.required]),
+    Chico: new FormControl('', [Validators.required])
    })
 }
 

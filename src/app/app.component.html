@@ -13,11 +13,13 @@
     <div class="col-xs-5 pl-3">
       <label for="inputText" class="form-label">Nombre de El</label>
       <input type="text" id="inputText" class="form-control" formControlName="Chico" aria-describedby="passwordHelpBlock">
-
+      <span class="mensaje-error" *ngIf="formDatos.get('Chico')?.hasError('required') && formDatos.get('Chico')?.touched">Debe llenar el campo </span>
+      <br>
       <label for="inputText5" class="form-label">Nombre de Ella</label>
       <input type="text" id="inputText5" class="form-control" formControlName="Chica" aria-describedby="passwordHelpBlock">
-
-        <button type="button" class="btn btn-primary m-4" name="" (click)="getParejas()">Procesar</button>
+      <span class="mensaje-error" *ngIf="formDatos.get('Chica')?.hasError('required') && formDatos.get('Chica')?.touched">Debe llenar el campo </span>
+        <br>
+        <button type="button" class="btn btn-primary m-4" name="" [disabled]="formDatos.invalid" (click)="getParejas()">Procesar</button>
         <button type="button" class="btn btn-success" name="" (click)="limpiar()">Limpiar</button>
 
     </div>
